@@ -1,0 +1,12 @@
+#htseq-count -f bam -r pos ../read_aln/3b_strain_2.srt.bam ../../reference/Saccharomyces_cerevisiae.R64-1-1.95.gtf > 3b_strain_count.tab
+import sys
+acc_file = sys.argv[1] # 打印命令行参数，提取SRR号
+read_alin_file = sys.argv[2]
+ref = sys.argv[3]
+with open (acc_file) as acc_file_handle:
+    for line in acc_file_handle:
+        line = line.rstrip() # 去掉换行符
+        #print(line)
+        ele = line.split("\t")
+        cmd_str = "htseq-count -f bam -r pos {read_alin_file}/{sample_real_name}.srt.bam {ref} > {sample_real_name}_count.tab".format(ref = ref,read_alin_file = read_alin_file,sample_real_name = ele[1])
+        print(cmd_str)

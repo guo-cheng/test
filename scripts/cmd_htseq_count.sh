@@ -1,0 +1,5 @@
+htseq-count -f bam -r pos /home/guocheng/yeast_project/data/analysis/read_aln//EV_strain_4.srt.bam /home/guocheng/yeast_project/data/reference/Saccharomyces_cerevisiae.R64-1-1.95.gtf > EV_strain_4_count.tab
+htseq-count -f bam -r pos /home/guocheng/yeast_project/data/analysis/read_aln//3b_strain_4.srt.bam /home/guocheng/yeast_project/data/reference/Saccharomyces_cerevisiae.R64-1-1.95.gtf > 3b_strain_4_count.tab
+htseq-count -f bam -r pos /home/guocheng/yeast_project/data/analysis/read_aln//3b_strain_3.srt.bam /home/guocheng/yeast_project/data/reference/Saccharomyces_cerevisiae.R64-1-1.95.gtf > 3b_strain_3_count.tab
+htseq-count -f bam -r pos /home/guocheng/yeast_project/data/analysis/read_aln//3b_strain_2.srt.bam /home/guocheng/yeast_project/data/reference/Saccharomyces_cerevisiae.R64-1-1.95.gtf > 3b_strain_2_count.tab
+htseq-count -f bam -r pos /home/guocheng/yeast_project/data/analysis/read_aln//EV_strain_3.srt.bam /home/guocheng/yeast_project/data/reference/Saccharomyces_cerevisiae.R64-1-1.95.gtf > EV_strain_3_count.tab

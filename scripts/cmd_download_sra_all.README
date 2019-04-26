@@ -1,0 +1,13 @@
+# wget ftp://ftp.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR548/SRR5483090/SRR5483090.sra
+
+# 下载所有的sra文件：
+
+import sys
+acc_file = sys.argv[1] # 打印命令行参数，提取SRR号
+with open (acc_file) as acc_file_handle:
+    for line in acc_file_handle:
+        line = line.rstrip() # 去掉换行符
+        #print(line)
+        cmd_str = "wget ftp://ftp.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/{srr_six}/{srr_acc}/{sra_file}".format(srr_six = line[0:6],srr_acc = line,sra_file = line + ".sra")
+        print(cmd_str)
+
